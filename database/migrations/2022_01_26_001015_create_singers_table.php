@@ -15,12 +15,12 @@ class CreateSingersTable extends Migration
     {
         Schema::create('singers', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('album_id') -> unsigned();
-            $table->string('artist');
+            $table->string('name', 40);
+            $table->string('sourname',40);
+            $table->tinyInteger('age')->nullable();
+            $table->string('stagename',60)->unique();
+            $table->text('bio')->nullable();
             $table->string('genre');
-            $table->YEAR('year');
-            $table->string('songs');
-
             $table->timestamps();
         });
     }
