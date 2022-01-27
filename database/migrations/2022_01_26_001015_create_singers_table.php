@@ -15,7 +15,7 @@ class CreateSingersTable extends Migration
     {
         Schema::create('singers', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 40) ->unique();
+            $table->string('name', 40);
             $table->tinyInteger('age')->nullable();
             $table->string('stagename',60) ->unique();
             $table->text('bio')->nullable();
