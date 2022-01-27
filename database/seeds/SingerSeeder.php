@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Singerphp artisan migrate:refresh --seed;
+
+
+use App\Singer;
 
 class SingerSeeder extends Seeder
 {
@@ -12,6 +14,6 @@ class SingerSeeder extends Seeder
      */
     public function run()
     {
-        factory(Singer::class, 100) -> create();
+         factory(Singer::class, 50) -> create();
     }
 }

@@ -8,7 +8,6 @@ use Faker\Generator as Faker;
 $factory->define(Singer::class, function (Faker $faker) {
     return [
         'name' => $faker -> name(),
-        'sourname' => $faker -> name(),
         'age' => $faker -> numberBetween(5, 100),
         'stagename' => $faker -> name(),
         'bio' => $faker -> text(),

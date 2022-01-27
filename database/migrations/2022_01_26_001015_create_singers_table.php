@@ -16,11 +16,10 @@ class CreateSingersTable extends Migration
         Schema::create('singers', function (Blueprint $table) {
             $table->id();
             $table->string('name', 40);
-            $table->string('sourname',40);
             $table->tinyInteger('age')->nullable();
-            $table->string('stagename',60)->unique();
+            $table->string('stagename',60);
             $table->text('bio')->nullable();
-            $table->string('genre');
+            $table->string('genre',60);
             $table->timestamps();
         });
     }
